@@ -47,8 +47,9 @@ public class SecurityConfiguration {
                 return config;
             }
         })).csrf(AbstractHttpConfigurer::disable)
-                .authorizeHttpRequests(request -> request.requestMatchers("/h2/**","/auth/**").permitAll()
+                .authorizeHttpRequests(request -> request.requestMatchers("/h2/**","/auth/**", "/api/allhangszer", "/api/hangszer/**").permitAll()
                         .requestMatchers("/api/savehangszer/**").hasRole("ADMIN")
+                        .requestMatchers("/api/addhangszer/**").hasRole("ADMIN")
                         .requestMatchers("/api/allhangszer/**").hasAnyRole("ADMIN","USER")
                         .anyRequest().authenticated()
                 )

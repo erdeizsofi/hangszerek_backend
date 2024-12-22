@@ -2,7 +2,6 @@ package hu.unideb.inf.hangszerek.controller;
 
 import hu.unideb.inf.hangszerek.service.dto.HangszerDto;
 import hu.unideb.inf.hangszerek.service.HangszerManagementService;
-import hu.unideb.inf.hangszerek.service.dto.VonosDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -33,7 +32,7 @@ public class HangszerController {
         return service.update(dto);
     }
 
-    // /api/deleteruha?id=x
+    // /api/deletehangszer?id=x
     @DeleteMapping("/deletehangszer")
     public void deleteHangszer(@RequestParam Long id){
         service.delete(id);
@@ -60,11 +59,6 @@ public class HangszerController {
                                              @RequestParam(required = false) String tipus){
         return service.hangszerByParams(nev,tipus);
 
-    }
-
-    @PostMapping("/vonos")
-    public void vonos(@RequestBody VonosDto dto){
-        service.saveVonos(dto);
     }
 
 }

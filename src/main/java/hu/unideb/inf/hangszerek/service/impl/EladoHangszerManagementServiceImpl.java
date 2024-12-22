@@ -1,14 +1,9 @@
 package hu.unideb.inf.hangszerek.service.impl;
 
 import hu.unideb.inf.hangszerek.data.entities.EladoHangszerEntity;
-import hu.unideb.inf.hangszerek.data.entities.HangszerEntity;
 import hu.unideb.inf.hangszerek.data.repositories.EladoHangszerRepository;
-import hu.unideb.inf.hangszerek.data.repositories.HangszerRepository;
 import hu.unideb.inf.hangszerek.service.EladoHangszerManagementService;
-import hu.unideb.inf.hangszerek.service.HangszerManagementService;
-import hu.unideb.inf.hangszerek.service.dto.FelhasznaloDto;
 import hu.unideb.inf.hangszerek.service.dto.EladoHangszerDto;
-import hu.unideb.inf.hangszerek.service.dto.VonosDto;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;

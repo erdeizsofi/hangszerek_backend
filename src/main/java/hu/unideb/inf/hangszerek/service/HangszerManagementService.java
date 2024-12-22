@@ -2,7 +2,7 @@ package hu.unideb.inf.hangszerek.service;
 
 import hu.unideb.inf.hangszerek.service.dto.FelhasznaloDto;
 import hu.unideb.inf.hangszerek.service.dto.HangszerDto;
-import hu.unideb.inf.hangszerek.service.dto.VonosDto;
+
 
 import java.util.List;
 
@@ -22,6 +22,5 @@ public interface HangszerManagementService {
     List<HangszerDto> hangszerByTipusDb(String tipus);
     List<HangszerDto> hangszerByParams(String nev, String tipus);
 
-    void saveVonos(VonosDto dto);
 
 }

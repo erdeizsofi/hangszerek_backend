@@ -5,7 +5,6 @@ import hu.unideb.inf.hangszerek.data.repositories.HangszerRepository;
 import hu.unideb.inf.hangszerek.service.HangszerManagementService;
 import hu.unideb.inf.hangszerek.service.dto.FelhasznaloDto;
 import hu.unideb.inf.hangszerek.service.dto.HangszerDto;
-import hu.unideb.inf.hangszerek.service.dto.VonosDto;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -90,18 +89,6 @@ public class HangszerManagementServiceImpl implements HangszerManagementService 
     public List<HangszerDto> hangszerByFelhasznaloId(Long FelhasznaloId) {
         return List.of();
     }
-
-    @Override
-    public void saveVonos(VonosDto dto) {
-        HangszerEntity entity = new HangszerEntity();
-        entity.setNev(dto.getNev());
-        entity.setLeiras(dto.getLeiras());
-        entity.setKep_url(dto.getKep_url());
-        entity.setTipus("vonos");
-        repo.save(entity);
-    }
-
-
 
     @Override
     public List<HangszerDto> hangszerByTipusDb(String tipus) {
